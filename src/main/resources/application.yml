@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: ${APP_VERSION}
+  application:
+    name: quiz-service
+
+  datasource:
+    url: ${POSTGRES_URL}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASS}
+    driver-class-name: org.postgresql.Driver
+    
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.master.yaml
+  
+  jpa:
+    hibernate:
+      ddl-auto: none
+server:
+  port: 8081
