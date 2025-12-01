@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include :
+      file : db/changelog/db.1.Quiz.yaml
+  - include :
+      file : db/changelog/db.2.QuizQuestion.yaml
